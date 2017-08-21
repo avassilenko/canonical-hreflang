@@ -2,34 +2,27 @@
     "name": "",
     "description": "",
     "keywords":[
-        "breadcrumbs"
+        "canonical",
+        "hreflang"
     ],
-    "homepage":"",
+    "homepage":"https://github.com/avassilenko/canonical-hreflang",
     "authors": [
         {
-            "name": "",
-            "email": ""
+            "name": "Andrei Vassilenko",
+            "email": "avassilenko2@gmail.com"
         }
     ],
     "license": "MIT License",
     "require": {
-        "php": ">=5.6.0"
+        "php": ">=5.6.0",
+        "crumby/route-locale": "1.0.*@dev"
     },
-    "require-dev":{
-        "symfony/dom-crawler": "~2.0",
-        "symfony/css-selector": "~2.0",
-        "phpunit/phpunit": "~4.4",
-        "squizlabs/php_codesniffer": "^2.5"
-    },
+    
     "autoload": {
         "psr-4": {
-            "": "src"
+            "Crumby\\CanonicalHreflang\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "": ""
-        }
-    },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable" : true
 }
