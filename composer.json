@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "description": "",
+    "name": "crumby/breadcrumbs",
+    "description": "Automatic canonical and hreflang output for Laravel 5.4",
     "keywords":[
         "canonical",
         "hreflang"
