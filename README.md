@@ -1,13 +1,14 @@
-1.  Register global middlewear in file app/Http/Kernel.php 
+Installation:
+-------------
+```
+> composer require crumby/canonical-hreflang:"dev-master"
+> php artisan vendor:publish --provider="Crumby\CanonicalHreflang\CanonicalHreflangServiceProvider" --tag=config
 
-protected $middleware = [
-        .............................
-        \Crumby\CanonicalHreflang\Middleware\CanonicalHreflangMiddleware::class
-    ];
-    
-2. Register service and facade. 
+
+Register service and facade:
+----------------------------
 File: config/app.php
-
+```
 'providers' => [
     ......................
     'Crumby\CanonicalHreflang\CanonicalHreflangServiceProvider',
@@ -19,8 +20,42 @@ File: config/app.php
     'Canonicalhreflang' => 'Crumby\CanonicalHreflang\Facades\CanonicalHreflang',
     ......................
  ];
-      
-3. You may disable multilangular and change file config/canonical-hreflang.php 
-    'multilangular' => false
-    It will prevent from adding hreflang links to head.
-     
+```
+
+Register global middlewear:
+--------------------------
+file app/Http/Kernel.php 
+```
+protected $middleware = [
+        .............................
+        \Crumby\CanonicalHreflang\Middleware\CanonicalHreflangMiddleware::class
+    ];
+```
+         
+Configuration:
+--------------
+Besides automatically set canonical url links to head, it also sets Hreflang, if unabled.
+config/canonical-hreflang.php
+```
+    'multilangular' => true
+```
+        
+Example:
+--------
+- add middlewear to constaructor of your controller
+    ```
+        class StaticPagesController extends Controller {
+            public function __construct()
+            {
+                ...........................
+                $this->middleware('CanonicalHreflang');
+                ...........................
+            }
+        }
+    ```
+
+- place this variable to your blage template <head> section
+    ```
+    {!! $CanonicalHreflang !!} 
+
+    ````   
