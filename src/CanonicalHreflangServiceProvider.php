@@ -23,7 +23,7 @@ class CanonicalHreflangServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/config/crumby-crumbs/canonical-hreflang.php' => config_path('crumby-crumbs/canonical-hreflang.php')
+                __DIR__.'/config/canonical-hreflang.php' => config_path('crumby-crumbs/canonical-hreflang.php')
             ], 'config');
         }
         
