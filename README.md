@@ -59,3 +59,7 @@ Example:
     {!! $CanonicalHreflang !!} 
 
     ````   
+
+Documentation:
+-------------
+<a href="https://www.crumby-pack.com/packages/laravel-54-hreflang-canonical-tags">API documentatuin</a>
