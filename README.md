@@ -54,7 +54,7 @@ Example:
         }
     ```
 
-- place this variable to your blage template <head> section
+- place this variable to your blage template head section
     ```
     {!! $CanonicalHreflang !!} 
 
