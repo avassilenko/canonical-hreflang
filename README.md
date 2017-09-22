@@ -62,4 +62,4 @@ Example:
 
 Documentation:
 -------------
-<a href="https://www.crumby-pack.com/packages/laravel-54-hreflang-canonical-tags">API documentatuin</a>
+<a href="https://www.crumby-pack.com/packages/laravel-54-hreflang-canonical-tags">API documentation</a>
