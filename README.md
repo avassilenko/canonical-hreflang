@@ -1,9 +1,9 @@
 Installation:
 -------------
 ```
-> composer require crumby/canonical-hreflang:"dev-master"
+> composer require crumby/canonical-hreflang
 > php artisan vendor:publish --provider="Crumby\CanonicalHreflang\CanonicalHreflangServiceProvider" --tag=config
-
+```
 
 Register service and facade:
 ----------------------------
