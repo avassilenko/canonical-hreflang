@@ -42,7 +42,7 @@ config/canonical-hreflang.php
         
 Example:
 --------
-- add middlewear to constaructor of your controller
+- add middleware to constructor of your controller
     ```
         class StaticPagesController extends Controller {
             public function __construct()
@@ -54,7 +54,7 @@ Example:
         }
     ```
 
-- place this variable to your blage template head section
+- place this variable to your Blade template head section
     ```
     {!! $CanonicalHreflang !!} 
 
